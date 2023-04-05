@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Raleway&display=swap');
+
 /*
 font-family: 'El Messiri', sans-serif; -titulo
 font-family: 'Raleway', sans-serif; -fuente secundaria
@@ -9,6 +10,16 @@ font-family: 'Raleway', sans-serif; -fuente secundaria
     box-sizing: border-box;
 }
 
+p {
+    color: #000000;
+}
+
+h2,
+h3 {
+    color: #000000;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }
@@ -17,36 +28,84 @@ ul {
     list-style: none;
 }
 
-p.navbar-brand{
+p.navbar-brand {
     padding-inline: 20px;
     text-align: center;
     margin: 0px;
 }
-
-.main-index {
+body{
     background-color: #202529;
+}
+.main-index {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
-.main-index-section{
+.main-index-section {
     padding: 15% 10px;
+    background: linear-gradient(45deg, rgba(0,0,0,0.45) 0%, rgba(10,18,52,1) 99%);
 }
 
-.main-index-section h1{
+.main-index-section h1 {
     font-family: 'El Messiri', sans-serif;
     font-size: 80px;
     padding-inline: 100px;
+    text-align: center;
     color: #faebd7;
 }
-.span{
+
+.span {
     color: #00aaff;
 }
 
-.main-index-section p{
+.main-index-section p {
     font-family: 'Raleway', sans-serif;
     color: #faebd7;
     text-align: -webkit-center;
     font-size: 25px;
     letter-spacing: 5px;
+}
+
+.main-index-section-marcas {
+    padding: 50px;
+    background-color: #f0f8ff;
+}
+
+.card {
+    width: 18rem;
+    align-items: center;
+    box-shadow: 0px 0px 15px 2px #111313cf
+}
+
+.main-productos {
+
+    width: 100%;
+    height: 100%;
+}
+
+.main-productos-section_pc {
+    padding: 50px;
+    background-color: #f0f8ff;
+    margin: 50px;
+}
+
+.main-productos-section_notebook {
+    padding: 50px;
+    margin-block: 40px;
+    background-color: #f0f8ff;
+    margin: 50px;
+}
+
+.main-productos-section_accesorios {
+    padding: 50px;
+    background-color: #f0f8ff;
+    margin: 50px;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: #202529;
+    margin: 0px;
+    padding: 10px;
 }
