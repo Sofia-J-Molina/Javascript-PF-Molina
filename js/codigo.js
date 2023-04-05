@@ -36,19 +36,19 @@ while (mensaje == 'si' || mensaje == 'Si') {
             incrementarTotal(250000);
             break;
         case 'f':
-            alert('Agregaste pc gamer intel Kairo core I3 al carro ... $ 250000');
+            alert('Agregaste pc gamer intel Kairo core I3 al carro ... $ 373000');
             incrementarTotal(373000);
             break;
         case 'g':
-            alert('Agregaste NOTEBOOK HP 245 al carro ... $ 250000');
+            alert('Agregaste NOTEBOOK HP 245 al carro ... $ 180000');
             incrementarTotal(180000);
             break;
         case 'h':
-            alert('Agregaste NOTEBOOK ACER ASPIRE 5 al carro ... $ 250000');
+            alert('Agregaste NOTEBOOK ACER ASPIRE 5 al carro ... $ 225000');
             incrementarTotal(225000);
             break;
         case 'i':
-            alert('Agregaste NOTEBOOK LENOVO V15 al carro ... $ 250000');
+            alert('Agregaste NOTEBOOK LENOVO V15 al carro ... $ 188000');
             incrementarTotal(188000);
             break;
         default:
