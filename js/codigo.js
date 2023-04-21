@@ -1,4 +1,4 @@
-let nombreUsuario = prompt('Hola! Ingresa tú nombre de usuario por favor');
+/*let nombreUsuario = prompt('Hola! Ingresa tú nombre de usuario por favor');
 while (nombreUsuario == '') {
     alert('Nombre invalido');
     nombreUsuario = prompt('Hola! Ingresa tú nombre de usuario por favor');
@@ -63,3 +63,39 @@ function incrementarTotal(precio) {
     total = total + precio;
     alert('Llevas gastado $' + total);
 }
+*/
+const carrito = [];
+let contenedor = document.getElementById("productos");
+
+function renderizarProductos() {
+    for (const producto of productos) {
+        contenedor.innerHTML += `
+    <div class="card col-sm-2">
+        <img src=${producto.foto} class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-title">${producto.nombre}</p>
+            <p class="card-text">$ ${producto.precio}</p>
+            <button id='btn${producto.id}' class="btn btn-primary">comprar</button>
+        </div>
+    </div>
+    `;
+    }
+    //Eventos
+    productos.forEach((producto) => {
+        document.getElementById(`btn${producto.id}`).addEventListener('click', () => {
+            agregarACarrito(producto);
+        });
+    });
+}
+
+renderizarProductos();
+
+function agregarACarrito(prodAAgregar){
+    carrito.push(prodAAgregar);
+    console.table(carrito);
+    alert(`Agregaste ${prodAAgregar.nombre} al carrito !`);
+    //incrementar el total
+    let totalCarrito = carrito.reduce((acumulador,producto)=>acumulador+producto.precio,0);
+
+}
+
