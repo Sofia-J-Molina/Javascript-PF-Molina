@@ -22,7 +22,8 @@
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <p class="navbar-brand">K<span class="span">T</span></p>
-                <img class="carrito" src="../img/CarritoDeCompras.webp" alt="carrito-de-compras">
+                <img id="verCarrito" class="carrito" src="../img/CarritoDeCompras.webp" alt="carrito-de-compras">
+                <span id="cantidadCarrito" class="numero-de-carrito">0</span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -69,24 +70,16 @@
 
     <main class="main-productos">
         <section class="main-index-section">
-            <h1>Kaos<span class="span">Tech</span></h1><P>Seccion Productos</P>
+            <h1>Kaos<span class="span">Tech</span></h1>
+            <P>Seccion Productos</P>
             <p>La tecnologia a tú alcance.</p>
-            
         </section>
-        <section id="productos" class="main-index-section-productos">
-            <div id="productos-pc" class="main-productos-section_pc">
-                <!--aqui los productos section pc-->
-            </div>
-            <div id="productos-notebook" class="main-productos-section_notebook">
-                <!--aqui los productos section Notebook-->
-            </div>
-            <div id="productos-accesorios" class="main-productos-section_accesorios">
-                <!--aqui los productos section accesorios pc-->
-            </div>
-        </section>
+        <!--shop content-->
+        <section id="shopContent" class="shop-content"></section>
     </main>
 
-
+    <!--modal container-->
+    <div id="modal-container" class="modal-container"></div>
 
 
     <footer class="footer">
@@ -99,12 +92,14 @@
 
 
 
-    <!--bts-->
+    <!--bts<script src="../js/codigo.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="../js/productos.js"></script>
-    <script src="../js/codigo.js"></script>
+    <script src="../js/logica.js"></script>
+    <script src="../js/carrito.js"></script>
+
 
 </body>
 
