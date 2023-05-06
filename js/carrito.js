@@ -4,11 +4,11 @@ const pintarCarrito = () => {
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = `
-    <p class= "modal-header-title">Carrito.</p>
+    <p class= "modal-header-title">Tú Carrito</p>
     `;
     modalContainer.append(modalHeader);
 
-    const modalButton = document.createElement("button");
+    const modalButton = document.createElement("div");
     modalButton.innerText = "X";
     modalButton.className = "modal-header-button";
 
@@ -28,6 +28,8 @@ const pintarCarrito = () => {
             <p>Cantidad: ${product.cantidad}</p>
             <span class ="sumar">+</span>
             <p>Total: ${product.cantidad * product.precio}</p>
+            <span class ="delete-product"> ❌ </span> 
+            
         `;
 
         modalContainer.append(carritoContent);
@@ -47,24 +49,24 @@ const pintarCarrito = () => {
             pintarCarrito();
         });
 
-        let eliminar = document.createElement("span");
-        eliminar.innerText = "❌";
-        eliminar.className = "delete-product";
-        carritoContent.append(eliminar);
-
-        eliminar.addEventListener("click", eliminarProducto);
+        let eliminar = carritoContent.querySelector(".delete-product");
+        eliminar.addEventListener("click", () => {
+            eliminarProducto(product.id);
+        });
     });
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalBuying = document.createElement("div");
     totalBuying.className = "total-content";
-    totalBuying.innerHTML = `total a pagar: $ ${total}`;
+    totalBuying.innerHTML = `Total a pagar: $ ${total} 
+    <button type="button" id="finalizarCompra" class="btn btn-outline-info">Finalizar Compra</button>`;
     modalContainer.append(totalBuying);
 };
 
 verCarrito.addEventListener("click", pintarCarrito);
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
+
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
     });
@@ -81,3 +83,10 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
+
+const finalizarCompra = document.getElementsByid("finalizarCompra");
+finalizarCompra.onclick=()=>{
+carrito=[];
+document.getElementsByClassName("modal-content").innerHTML="";
+document.getElementById("total-content").innerText="Total a pagar $: ";
+};

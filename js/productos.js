@@ -3,7 +3,7 @@ const productos = [{
     foto: '../img/auriculares-logitech-G935.jpeg',
     nombre: "auriculares logitech G935",
     precio: 60000,
-    categoria: "accesorios para PC",
+    categoria: "accesoriospc",
     cantidad: 1,
 },
 {
@@ -11,7 +11,7 @@ const productos = [{
     foto: '../img/auriculares-JBL.webp',
     nombre: "auriculares JBL",
     precio: 10000,
-    categoria: "accesorios para PC",
+    categoria: "accesoriospc",
     cantidad: 1,
 },
 {
@@ -19,7 +19,7 @@ const productos = [{
     foto: "../img/auriculares-hp.jpg",
     nombre: "auriculares hp",
     precio: 40000,
-    categoria: "accesorios para PC",
+    categoria: "accesoriospc",
     cantidad: 1,
 },
 {
@@ -69,5 +69,6 @@ const productos = [{
     precio: 188000,
     categoria: "notebook",
     cantidad: 1,
-}
+},
 ];
+
