@@ -28,7 +28,7 @@
                 <p class="navbar-brand">K<span class="span">T</span></p>
                 <img id="verCarrito" class="carrito" src="./img/CarritoDeCompras.webp" alt="carrito-de-compras">
                 <span id="cantidadCarrito" class="numero-de-carrito">0</span>
-                <i class="bi bi-person"></i>
+                <i id="usuario" class="bi bi-person"></i>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -45,29 +45,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="./pages/productos.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="./pages/productos.html"> Computadoras </a></li>
-                                    <li><a class="dropdown-item" href="./pages/productos.html">Notebook</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="./pages/productos.html">Accesorios para PC</a>
-                                    </li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./pages/productos.html">Productos</a>
+                            </li>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/iniciosesion.html">Inicio de sesión</a>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-success" type="submit">Buscar</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -89,7 +74,7 @@
                             <img src="./img/seccion-pc.jpg" class="card-img-top" alt="pc-escritorio">
                             <div class="card-body">
                                 <h2 class="card-title">Pc de escritorio</h2>
-                                <a href="#" class="btn btn-primary">Ver más</a>
+                                <a href="./pages/productos.html #computadoras" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +83,7 @@
                             <img src="./img/seccion notebook.jpg" class="card-img-top" alt="Notebook">
                             <div class="card-body">
                                 <h2 class="card-title">Notebook</h2>
-                                <a href="#" class="btn btn-primary"> Ver más </a>
+                                <a href="./pages/productos.html #notebook" class="btn btn-primary"> Ver más </a>
                             </div>
                         </div>
                     </div>
@@ -107,28 +92,29 @@
                             <img src="./img/accesorios-pc.jpg" class="card-img-top" alt="accesorios-pc">
                             <div class="card-body">
                                 <h2 class="card-title">Accesorios para PC</h2>
-                                <a href="#" class="btn btn-primary">Ver más </a>
+                                <a href="./pages/productos.html #accesoriospc" class="btn btn-primary">Ver más </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <h3>Nuestras marcas</h3>
-            <div class="container text-center">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <img src="./img/hp-logo-0.png" alt="logo-hp"  class="logos-png">
-                        <img src="./img/logoLogitech.png" alt="logo-Logitech" class="logos-png">
-                        <img src="./img/logoryzen.png" alt="logo-ryzen" class="logos-png">
-                        <img src="./img/logoLenovo.png" alt="logo-Lenovo" class="logos-png">
-                        <img src="./img/jbl-logo.png" alt="logo-jbl" class="logos-png">
-                        <img src="./img/logoAcer.png" alt="logo-Acer" class="logos-png">
+            <div class="main-index-section-marcas">
+                <h3>Nuestras marcas</h3>
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="./img/hp-logo-0.png" alt="logo-hp" class="logos-png">
+                            <img src="./img/logoLogitech.png" alt="logo-Logitech" class="logos-png">
+                            <img src="./img/logoryzen.png" alt="logo-ryzen" class="logos-png">
+                            <img src="./img/logoLenovo.png" alt="logo-Lenovo" class="logos-png">
+                            <img src="./img/jbl-logo.png" alt="logo-jbl" class="logos-png">
+                            <img src="./img/logoAcer.png" alt="logo-Acer" class="logos-png">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
     </main>
-
 
 
 
@@ -150,6 +136,8 @@
 
 
 
+        <!--modal container-->
+    <div id="modal-container" class="modal-container"></div>
 
 
     <!--bts-->
@@ -163,6 +151,7 @@
     <!--Js-->
     <script src="./js/productos.js"></script>
     <script src="./js/logica.js"></script>
+    <script src="./js/applogin.js"></script>
     <script src="./js/carrito.js"></script>
 
 </body>

@@ -28,7 +28,7 @@
                 <p class="navbar-brand">K<span class="span">T</span></p>
                 <img id="verCarrito" class="carrito" src="../img/CarritoDeCompras.webp" alt="carrito-de-compras">
                 <span id="cantidadCarrito" class="numero-de-carrito">0</span>
-                <i class="bi bi-person"></i>
+                <i id="usuario" class="bi bi-person"></i>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -51,22 +51,18 @@
                                     Productos
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="./productos.html">Computadoras</a></li>
-                                    <li><a class="dropdown-item" href="./productos.html">Notebook</a></li>
+                                    <li><a class="dropdown-item" href="#computadoras">Computadoras</a></li>
+                                    <li><a class="dropdown-item" href="#notebook">Notebook</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="./productos.html">Accesorios para PC</a></li>
+                                    <li><a class="dropdown-item" href="#accesoriospc">Accesorios para PC</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../pages/iniciosesion.html">Inicio de sesión</a>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-success" type="submit">Buscar</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -83,15 +79,13 @@
         <section id="shopContent" class="shop-content">
             <h2 class="secciones-t">Computadoras</h2>
             <div id="computadoras" class="computadoras">
-
+                
             </div>
             <h2 class="secciones-t"> Notebooks </h2>
             <div id="notebook" class="notebook">
-
             </div>
             <h2 class="secciones-t">Accesorios para tú Pc</h2>
             <div id="accesoriospc" class="accesorios-pc">
-
             </div>
         </section>
     </main>
@@ -127,6 +121,7 @@
     <!--Js-->
     <script src="../js/productos.js"></script>
     <script src="../js/logica.js"></script>
+    <script src="../js/applogin.js"></script>
     <script src="../js/carrito.js"></script>
 
 

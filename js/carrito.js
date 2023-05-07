@@ -61,6 +61,33 @@ const pintarCarrito = () => {
     totalBuying.innerHTML = `Total a pagar: $ ${total} 
     <button type="button" id="finalizarCompra" class="btn btn-outline-info">Finalizar Compra</button>`;
     modalContainer.append(totalBuying);
+    let botonFinalizarCompra = document.getElementById("finalizarCompra");
+    botonFinalizarCompra.onclick = () => {
+        carrito = [];
+        document.querySelector(".modal-content").innerHTML = ' ';
+        document.querySelector(".total-content").innerText = "Total a pagar $:";
+        pintarCarrito();
+        saveLocal();
+        carritoCounter();
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: 'Su compra ha sido realizada con exito! 🥳'
+        })
+    };
+
 };
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -84,9 +111,46 @@ const carritoCounter = () => {
 
 carritoCounter();
 
-const finalizarCompra = document.getElementsByid("finalizarCompra");
-finalizarCompra.onclick=()=>{
-carrito=[];
-document.getElementsByClassName("modal-content").innerHTML="";
-document.getElementById("total-content").innerText="Total a pagar $: ";
-};
+comprar.addEventListener("click", () => {
+
+    const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+
+    if (repeat) {
+        carrito.map((prod) => {
+            if (prod.id === product.id) {
+                prod.cantidad++;
+            }
+        });
+    } else {
+        carrito.push({
+            id: product.id,
+            foto: product.foto,
+            nombre: product.nombre,
+            precio: product.precio,
+            cantidad: product.cantidad,
+        });
+    }
+    // uso de toastify
+    Toastify({
+        text: `Agregaste ${product.nombre} al carrito 😎`,
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #0074ae, #00aaff)",
+            color: "#000000",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+
+
+    console.log(carrito);
+    carritoCounter();
+    saveLocal();
+});
+
+

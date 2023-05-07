@@ -2,7 +2,6 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
-const finalizarCompra = document.getElementById("finalizarCompra"); //fijate si lo usas
 
 function mostrarProductos(container, productos) {
     productos.forEach((product) => {
@@ -99,3 +98,4 @@ const saveLocal = () => {
 
 //get item
 JSON.parse(localStorage.getItem("carrito"));
+
