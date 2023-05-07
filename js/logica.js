@@ -97,5 +97,5 @@ const saveLocal = () => {
 };
 
 //get item
-JSON.parse(localStorage.getItem("carrito"));
+JSON.parse(localStorage.getItem("carrito")); //fijarse en que ultilizarlo
 
