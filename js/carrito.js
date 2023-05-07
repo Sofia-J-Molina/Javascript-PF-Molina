@@ -27,7 +27,7 @@ const pintarCarrito = () => {
             <span class ="restar">-</span>
             <p>Cantidad: ${product.cantidad}</p>
             <span class ="sumar">+</span>
-            <p>Total: ${product.cantidad * product.precio}</p>
+            <p>Total: $ ${product.cantidad * product.precio}</p>
             <span class ="delete-product"> ❌ </span> 
             
         `;
