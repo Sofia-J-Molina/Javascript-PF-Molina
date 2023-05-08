@@ -104,9 +104,16 @@ div[id] {
     background-color: #f0f8ff;
 }
 
-/*.col {
-    margin-block-start: 40px;
-}*/
+.dollar-dom {
+    padding: 5px;
+    margin: 20px;
+    margin-inline: 30px;
+    font-family: 'El Messiri', sans-serif;
+    color: #eef8fe;
+}
+.bi-arrow-up{
+    color: #39d300;
+}
 .secciones-t {
     color: #f0f8ff;
     font-size: 40px;
@@ -244,6 +251,7 @@ div[id] {
     font-size: 15px;
     margin-inline: 60px;
 }
+
 .total-content {
     font-size: 20px;
     padding: 20px;
@@ -323,7 +331,9 @@ fieldset {
 .p-form span {
     color: #00aaff;
 }
-
+#email-user input{
+color: #000000;
+}
 .title-form {
     color: #ffffff;
 }
@@ -471,6 +481,7 @@ fieldset {
         margin: 10px;
         gap: 15px;
         margin-inline: 20px;
+        flex-direction: row;
 
     }
 
@@ -478,6 +489,7 @@ fieldset {
         margin-inline: 10px;
         gap: 15px;
         margin-inline: 20px;
+        flex-direction: row;
 
     }
 
@@ -485,6 +497,7 @@ fieldset {
         margin-inline: 10px;
         gap: 15px;
         margin-inline: 20px;
+        flex-direction: row;
 
     }
 
@@ -550,16 +563,19 @@ fieldset {
     .computadoras {
         margin: 40px;
         gap: 40px;
+        flex-direction: row;
     }
 
     .notebook {
         margin-inline: 40px;
         gap: 40px;
+        flex-direction: row;
     }
 
     .accesorios-pc {
         margin-inline: 40px;
         gap: 40px;
+        flex-direction: row;
     }
 
     .card {
@@ -621,22 +637,25 @@ fieldset {
         margin: 80px;
         gap: 60px;
         padding: 15px;
+        flex-direction: row;
     }
 
     .notebook {
         margin-inline: 80px;
         gap: 60px;
         padding: 15px;
+        flex-direction: row;
     }
 
     .accesorios-pc {
         margin-inline: 80px;
         gap: 60px;
         padding: 15px;
+        flex-direction: row;
     }
 
     .card {
-        max-width: 200px;
+        max-width: 290px;
     }
 
     /*iniciar sesión*/
@@ -681,7 +700,7 @@ fieldset {
 }
 
 @media only screen and (min-width: 1200px) {
-    
+
     .carrito {
         width: 30px;
         margin: 0px 0 0 0px;
@@ -690,7 +709,7 @@ fieldset {
         right: 100px;
         cursor: pointer;
     }
-    
+
     .numero-de-carrito {
         color: white;
         font-size: 12px;
@@ -700,18 +719,18 @@ fieldset {
         top: 6px;
         right: 90px;
     }
-    
-    
+
+
     .main-index {
         width: 100%;
         height: 100%;
     }
-    
+
     .main-index-section {
         padding: 15% 10px;
         background: linear-gradient(45deg, #00000073 0%, #0a1234 99%);
     }
-    
+
     .main-index-section h1 {
         font-family: 'El Messiri', sans-serif;
         font-size: 80px;
@@ -719,11 +738,11 @@ fieldset {
         text-align: center;
         color: #faebd7;
     }
-    
+
     .span {
         color: #00aaff;
     }
-    
+
     .main-index-section p {
         font-family: 'Raleway', sans-serif;
         color: #faebd7;
@@ -731,12 +750,16 @@ fieldset {
         font-size: 25px;
         letter-spacing: 5px;
     }
-    
+
     .main-index-section-marcas {
         padding: 50px;
         background-color: #f0f8ff;
     }
-    
+
+    .row>* {
+        display: block;
+    }
+
     /*.col {
         margin-block-start: 40px;
     }*/
@@ -749,47 +772,50 @@ fieldset {
         object-position: center;
         padding: 40px;
     }
-    
+
     .computadoras {
         display: flex;
         margin-inline: 150px;
         gap: 80px;
         margin-bottom: 90px;
+        flex-direction: row;
     }
-    
+
     .notebook {
         display: flex;
         margin-inline: 150px;
         gap: 80px;
         margin-bottom: 90px;
+        flex-direction: row;
     }
-    
+
     .accesorios-pc {
         display: flex;
         margin-inline: 150px;
         gap: 80px;
         margin-bottom: 90px;
+        flex-direction: row;
     }
-    
+
     .card {
         box-shadow: 0px 4px 8px 0 #5d81ad;
         max-width: 300px;
         text-align: center;
         font-family: sans-serif;
     }
-    
+
     .card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     .price {
         color: #808080;
         font-size: 22px;
     }
-    
-    
+
+
     .card button {
         outline: 0;
         padding: 12px;
@@ -800,11 +826,11 @@ fieldset {
         width: 100%;
         font-size: 18px;
     }
-    
+
     .card button:hover {
         opacity: 0.8;
     }
-    
+
     /*modal content*/
     .modal-container {
         width: 90%;
@@ -822,11 +848,11 @@ fieldset {
         border-radius: 20px;
         box-shadow: 2px 4px 20px 0 #ffffff2e;
     }
-    
+
     .modal-container::-webkit-scrollbar {
         display: none;
     }
-    
+
     .modal-header {
         display: flex;
         justify-content: space-around;
@@ -834,7 +860,7 @@ fieldset {
         color: #ffffff;
         width: 100%;
     }
-    
+
     .modal-header-title {
         justify-self: start;
         font-size: 25px;
@@ -843,18 +869,18 @@ fieldset {
         letter-spacing: 4px;
         BORDER-BOTTOM-STYLE: OUTSET;
     }
-    
+
     .modal-header-title:hover {
         color: #00aaff;
         BORDER-BOTTOM-STYLE: OUTSET;
         border-color: #00aaff;
     }
-    
+
     .modal-header-button {
         cursor: pointer;
         font-size: 20px;
     }
-    
+
     .modal-container>.modal-content {
         display: flex;
         flex-direction: row;
@@ -863,39 +889,40 @@ fieldset {
         width: 80%;
         margin: 10px;
     }
-    
+
     .modal-container p {
         color: #ffffff;
     }
-    
+
     .modal-container>div>img {
         height: 120px;
         width: 120px;
     }
-    
+
     .btn-outline-info {
         font-size: 15px;
         margin-inline: 60px;
     }
+
     .total-content {
         font-size: 20px;
         padding: 20px;
         text-align: center;
         padding-top: 20px;
     }
-    
+
     .delete-product {
         cursor: pointer;
     }
-    
+
     .sumar {
         cursor: pointer;
     }
-    
+
     .restar {
         cursor: pointer;
     }
-    
+
     .logos-png {
         width: 200px;
         margin: 10px;
@@ -903,11 +930,11 @@ fieldset {
         padding: 20px;
         background-color: #eef8fe;
     }
-    
+
     .logos-png:hover {
         box-shadow: 8px 9px 30px 0 #000000a0;
     }
-    
+
     .footer {
         width: 100%;
         height: 100%;
@@ -915,27 +942,27 @@ fieldset {
         margin: 0px;
         padding: 10px;
     }
-    
+
     .footer p {
         color: #ffffff;
     }
-    
+
     /*inicio de sesión*/
-    
+
     .main-iniciosesion {
         width: 100%;
         height: 800px;
     }
-    
+
     .main-iniciosesion p,
     span {
         color: #ffffffcc;
     }
-    
+
     .box {
         object-position: center;
     }
-    
+
     fieldset {
         background: linear-gradient(45deg, rgba(0, 0, 0, 0.45) 0%, rgba(10, 18, 52, 1) 99%);
         margin-inline: 500px;
@@ -948,15 +975,15 @@ fieldset {
         padding: 40px;
         box-shadow: 0px 68px 100px 0 #074476a0;
     }
-    
+
     .p-form {
         font-size: 25px;
     }
-    
+
     .p-form span {
         color: #00aaff;
     }
-    
+
     .title-form {
         color: #ffffff;
     }

@@ -1,7 +1,6 @@
 const crearUser = document.getElementById("crear-usuario");
 const box = document.getElementById("box");
 
-
 crearUser.addEventListener("click", () => {
     box.innerHTML = " ";
     box.classList.remove("box");

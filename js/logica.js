@@ -3,6 +3,10 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
+//API
+let dolarVenta;
+obtenerDolar();
+
 function mostrarProductos(container, productos) {
     productos.forEach((product) => {
         let content = document.createElement("div");
@@ -99,3 +103,29 @@ const saveLocal = () => {
 //get item
 JSON.parse(localStorage.getItem("carrito")); //fijarse en que ultilizarlo
 
+//API
+function obtenerDolar(){
+    const URLDOLAR='https://api.bluelytics.com.ar/v2/latest';
+    fetch(URLDOLAR)
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+            const dolarBlue = datos.blue;
+            document.getElementById('Dollar').innerHTML += `
+                <p id="dollardom" class="dollar-dom">Dolar compra: $ ${dolarBlue.value_buy} - Dolar venta: $ ${dolarBlue.value_sell}<i class="bi bi-arrow-up"></i> </p> 
+            `;
+            dolarVenta = dolarBlue.value_sell;
+            Toastify({
+                text: `El dolar sigue subiendo, pero nuestros precios se mantienen! Compra eso que tanto necesitas!!`,
+                duration: 2000,
+                destination: "https://github.com/apvarun/toastify-js",
+                gravity: "bottom", // `top` or `bottom`
+                position: "left", // `left`, `center` or `right`
+
+                style: {
+                    background: "linear-gradient(to right, #008000, #447544)",
+                    color: "#ffff",
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        })
+}

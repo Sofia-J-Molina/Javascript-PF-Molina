@@ -111,46 +111,6 @@ const carritoCounter = () => {
 
 carritoCounter();
 
-comprar.addEventListener("click", () => {
 
-    const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
-
-    if (repeat) {
-        carrito.map((prod) => {
-            if (prod.id === product.id) {
-                prod.cantidad++;
-            }
-        });
-    } else {
-        carrito.push({
-            id: product.id,
-            foto: product.foto,
-            nombre: product.nombre,
-            precio: product.precio,
-            cantidad: product.cantidad,
-        });
-    }
-    // uso de toastify
-    Toastify({
-        text: `Agregaste ${product.nombre} al carrito 😎`,
-        duration: 3000,
-        destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: true,
-        gravity: "bottom", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: "linear-gradient(to right, #0074ae, #00aaff)",
-            color: "#000000",
-        },
-        onClick: function () { } // Callback after click
-    }).showToast();
-
-
-    console.log(carrito);
-    carritoCounter();
-    saveLocal();
-});
 
 
